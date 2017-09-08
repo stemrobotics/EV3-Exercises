@@ -13,10 +13,10 @@ public class ColorSensor implements ColorDetector, ColorIdentifier
 	EV3ColorSensor	sensor;
 	float[]			sample;
 
-    /**
-     * Creates ColorSensor object. This is a wrapper class for EV3ColorSensor.
-     * @param port SensorPort of EV3ColorSensor device.
-     */
+    	/**
+     	* Creates ColorSensor object. This is a wrapper class for EV3ColorSensor.
+     	* @param port SensorPort of EV3ColorSensor device.
+     	*/
 	public ColorSensor(Port port)
 	{
 		sensor = new EV3ColorSensor(port);
@@ -154,6 +154,11 @@ public class ColorSensor implements ColorDetector, ColorIdentifier
 		sensor.setFloodlight(color);
 	}
 	
+	/**
+	* Map color integer to name.
+	* @param color Color id value.
+	* @return String with color name.
+	*/
 	public static String colorName(int color)
 	{
 		switch (color)
