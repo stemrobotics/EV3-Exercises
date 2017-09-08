@@ -9,7 +9,7 @@ public class UltraSonicSensor implements RangeFinder
 {
 	EV3UltrasonicSensor sensor;
 	SampleProvider		sp;
-    float [] 			sample;
+    	float [] 			sample;
 
     /**
      * Creates UltraSonicSensor object. This is a wrapper class for EV3UltrasonicSensor.
@@ -19,7 +19,7 @@ public class UltraSonicSensor implements RangeFinder
 	{
 		sensor = new EV3UltrasonicSensor(port);
 		sp = sensor.getDistanceMode();
-	    sample = new float[sp.sampleSize()];
+	    	sample = new float[sp.sampleSize()];
 	}
 
 	/**
@@ -38,9 +38,9 @@ public class UltraSonicSensor implements RangeFinder
 	@Override
 	public float getRange()
 	{
-       sp.fetchSample(sample, 0);
+       		sp.fetchSample(sample, 0);
 
-       return sample[0];
+       		return sample[0];
 	}
 
 	/**
@@ -50,9 +50,9 @@ public class UltraSonicSensor implements RangeFinder
 	@Override
 	public float[] getRanges()
 	{
-       sp.fetchSample(sample, 0);
+       		sp.fetchSample(sample, 0);
 
-       return sample;
+       		return sample;
 	}
 	
 	/**
