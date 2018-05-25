@@ -1,7 +1,7 @@
 public class MyClass()
 {
-    int              myClassLevelVariable = 1;
-    static final int MY_CLASS_CONSTANT = 1;
+    public int              myClassLevelVariable = 1;
+    public final int        MY_CLASS_CONSTANT = 1;
 
     /* Comment */
 
@@ -11,8 +11,8 @@ public class MyClass()
          comment.
         */
 
-        int              myMethodLevelVariable;
-        static final int MY_METHOD_CONSTANT = 2;
+        private int         myMethodLevelVariable;
+        private final int   MY_METHOD_CONSTANT = 2;
 
         // Comment.
 
