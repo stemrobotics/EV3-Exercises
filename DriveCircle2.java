@@ -1,4 +1,5 @@
-package ev3.exercises.driveCircle2;
+package ev3.exercises;
+
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
 import lejos.hardware.motor.*;
