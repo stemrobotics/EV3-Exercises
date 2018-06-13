@@ -1,4 +1,4 @@
-package ev3.exercises.ultraSonicDemo;
+package ev3.exercises;
 
 import ev3.exercises.library.*;
 import lejos.hardware.Button;
