@@ -1,5 +1,5 @@
 
-package ev3.exercises.gyroDemo;
+package ev3.exercises;
 
 import ev3.exercises.library.*;
 import lejos.hardware.Button;
