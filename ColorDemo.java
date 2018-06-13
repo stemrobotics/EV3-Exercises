@@ -1,4 +1,4 @@
-package ev3.exercises.colorDemo;
+package ev3.exercises;
 
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
