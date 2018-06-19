@@ -14,20 +14,13 @@ import ev3.exercises.library.*;
 
 public class DriveCircleLogging 
 { 
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
-        // this try/catch block gets logging started and writes the first log
-        // message. Note that the setup() method needs the name of the class
-        // we are adding logging to.
-        try
-        {
-            Logging.setup(DriveCircleLogging.class.getPackage(), false);
-            Logging.log("Starting DriveCircleLogging");
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
+        // These statements get logging started and writes the first log
+        // message. Note that we added 'throws Exception' to the main
+        // method above. This is required in case the setup fails.
+        Logging.setup(DriveCircleLogging.class.getPackage(), false);
+        Logging.log("Starting DriveCircleLogging");
         
         EV3TouchSensor sensor1 = new EV3TouchSensor(SensorPort.S1);
         SampleProvider touchSP = sensor1.getTouchMode();
