@@ -11,7 +11,7 @@ public class ServoDemo
 {
     public static void main(String[] args)
     {
-    	intbutton, angle = 0;
+    	int     button, angle = 0;
     	
         System.out.println("Servo Demo\n");
         System.out.println("Press any key to start");
@@ -29,37 +29,37 @@ public class ServoDemo
         
         do
         {
-        // Loop reading for any button press, quit on escape button.
-        button = Button.waitForAnyPress();
+            // Loop reading for any button press, quit on escape button.
+            button = Button.waitForAnyPress();
         	
-        // Process any other buttons.
-       	switch (button)
-        {
-        // Down button causes arm to move down until zero position.
-        case Button.ID_DOWN:
-        if (angle >= 10)
-        {
-        servoMotor.rotate(-10);
-        angle -= 10;
-        }
+            // Process any other buttons.
+       	    switch (button)
+            {
+                // Down button causes arm to move down until zero position.
+                case Button.ID_DOWN:
+                    if (angle >= 10)
+                    {
+                        servoMotor.rotate(-10);
+                        angle -= 10;
+                    }
         			
-        break;
+                    break;
         			
-        // Up button causes arm to move up until it is at 160 degrees,
-        // which we determined by testing is the max the arm can go.
-        case Button.ID_UP:
-        if (angle < 160)
-        {
-        servoMotor.rotate(10);
-        angle += 10;
-        }
+                // Up button causes arm to move up until it is at 160 degrees,
+                // which we determined by testing is the max the arm can go.
+                case Button.ID_UP:
+                    if (angle < 160)
+                    {
+                        servoMotor.rotate(10);
+                        angle += 10;
+                    }
         			
-        break;
-        }
+                    break;
+            }
         	
-        // Display the current arm angle on the LCD.
-        Lcd.clear(5);
-        Lcd.print(5, "angle=%d", angle);
+            // Display the current arm angle on the LCD.
+            Lcd.clear(5);
+            Lcd.print(5, "angle=%d", angle);
         	
         } while (!(button == Button.ID_ESCAPE));
         
