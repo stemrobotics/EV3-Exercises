@@ -71,4 +71,3 @@ public class ServoDemo
         Sound.beepSequence();    // we are done.
     }
 }
- 
