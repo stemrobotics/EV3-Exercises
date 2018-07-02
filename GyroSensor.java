@@ -1,4 +1,4 @@
-package ev3.projects.library;
+package ev3.exercises.library;
 
 import lejos.hardware.port.Port;
 import lejos.hardware.sensor.EV3GyroSensor;
